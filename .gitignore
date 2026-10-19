@@ -1,0 +1,9 @@
+# Local tools and browser profiles
+.tools/
+
+# Build and test output
+artifacts/
+build/
+dist/
+coverage/
+*.tsbuildinfo
