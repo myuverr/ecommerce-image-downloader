@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Product Image Downloader",
+  "version": "0.1.0",
+  "description": "Select product images in a gallery and download PNG files. Experimental Suning support and a built-in sample gallery.",
+  "permissions": [
+    "storage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://product.suning.com/*",
+    "https://imgservice.suning.cn/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open sample gallery"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://product.suning.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'self' https://imgservice.suning.cn; img-src 'self' blob:; style-src 'self'"
+  }
+}
