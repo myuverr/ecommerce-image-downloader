@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A lightweight Chrome extension for finding, selecting, and saving product images as PNG files.">
+    <meta name="theme-color" content="#f5f7ff">
+    <title>Product Image Downloader — Select and save product images</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="skipLink">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./" data-i18n-aria-label="brandName" aria-label="Product Image Downloader">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" focusable="false">
+              <rect x="3" y="3" width="34" height="34" rx="12" fill="currentColor"/>
+              <path d="M12 25.5 18 19l4.3 4.5 3.3-3.4L31 26H12Z" fill="#fff" opacity=".94"/>
+              <circle cx="25.5" cy="14.5" r="2.5" fill="#b8fbec"/>
+            </svg>
+          </span>
+          <span class="brand-name" data-i18n="brandName">Product Image Downloader</span>
+        </a>
+
+        <div class="language-switch" role="group" data-i18n-aria-label="languageLabel" aria-label="Choose language">
+          <button type="button" data-language="en" data-i18n-aria-label="englishLabel" aria-label="English" aria-pressed="true">EN</button>
+          <button type="button" data-language="zh-hans" data-i18n-aria-label="chineseLabel" aria-label="Simplified Chinese" aria-pressed="false">简体中文</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero page-width" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="heroEyebrow">A simple workflow for product images</span></p>
+          <h1 id="hero-title" data-i18n="heroTitle">Collect the product images you need.</h1>
+          <p class="hero-description" data-i18n="heroDescription">Find candidate images on a product page, choose the ones you want, and save them as PNG files.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/myuverr/ecommerce-image-downloader/releases/download/v0.1.0/ecommerce-image-downloader-0.1.0.zip">
+              <span data-i18n="downloadCta">Download for Chrome</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2.5v9m0 0 3.5-3.5M10 11.5 6.5 8M3.5 13v3h13v-3"/></svg>
+            </a>
+            <a class="text-link" href="https://github.com/myuverr/ecommerce-image-downloader/releases/tag/v0.1.0" data-i18n="releaseLink">View release</a>
+          </div>
+          <p class="version-note"><span class="version-dot" aria-hidden="true"></span><span data-i18n="versionNote">Version 0.1.0 · ZIP download</span></p>
+        </div>
+
+        <div class="hero-visual" role="img" data-i18n-aria-label="illustrationLabel" aria-label="Illustration of a product image gallery">
+          <div class="visual-glow visual-glow-one" aria-hidden="true"></div>
+          <div class="visual-glow visual-glow-two" aria-hidden="true"></div>
+          <svg class="gallery-illustration" viewBox="0 0 560 440" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="art-backdrop" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e8eaff"/>
+                <stop offset="1" stop-color="#d8f8f1"/>
+              </linearGradient>
+              <linearGradient id="item-blue" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#9bd7ef"/>
+                <stop offset="1" stop-color="#6497dc"/>
+              </linearGradient>
+              <linearGradient id="item-coral" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffc7ab"/>
+                <stop offset="1" stop-color="#f28e83"/>
+              </linearGradient>
+              <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="150%">
+                <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#514d9d" flood-opacity=".13"/>
+              </filter>
+            </defs>
+            <rect x="34" y="34" width="492" height="372" rx="34" fill="url(#art-backdrop)"/>
+            <circle cx="487" cy="76" r="17" fill="#fff" opacity=".62"/>
+            <circle cx="82" cy="350" r="10" fill="#8ed9ca" opacity=".72"/>
+            <g filter="url(#card-shadow)">
+              <rect x="93" y="77" width="374" height="286" rx="24" fill="#fff"/>
+              <path d="M117 77h326a24 24 0 0 1 24 24v27H93v-27a24 24 0 0 1 24-24Z" fill="#fbfbff"/>
+              <circle cx="119" cy="101" r="5" fill="#f6a69b"/>
+              <circle cx="137" cy="101" r="5" fill="#f4d27b"/>
+              <circle cx="155" cy="101" r="5" fill="#83d5c5"/>
+              <rect x="193" y="96" width="135" height="10" rx="5" fill="#e9eaf4"/>
+              <rect x="344" y="96" width="83" height="10" rx="5" fill="#eef0f7"/>
+              <rect x="116" y="151" width="103" height="91" rx="15" fill="#f3e8dc"/>
+              <ellipse cx="167" cy="216" rx="31" ry="8" fill="#d4c3b4" opacity=".7"/>
+              <path d="M145 188h44l-4 25a10 10 0 0 1-10 9h-16a10 10 0 0 1-10-9l-4-25Z" fill="#e9a982"/>
+              <path d="M154 179h26v10h-26z" rx="4" fill="#d28963"/>
+              <path d="M156 199h21" stroke="#fff4e9" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+              <rect x="232" y="151" width="103" height="91" rx="15" fill="#e4eef9"/>
+              <ellipse cx="284" cy="218" rx="29" ry="7" fill="#bdd2e7" opacity=".7"/>
+              <path d="M266 177h34v39a8 8 0 0 1-8 8h-18a8 8 0 0 1-8-8v-39Z" fill="url(#item-blue)"/>
+              <path d="M299 185h7a9 9 0 0 1 0 18h-7" fill="none" stroke="#5481bd" stroke-width="5"/>
+              <path d="M274 184h18" stroke="#eff8ff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+              <rect x="348" y="151" width="103" height="91" rx="15" fill="#fce9e6"/>
+              <ellipse cx="399" cy="218" rx="29" ry="7" fill="#eacac5" opacity=".7"/>
+              <path d="M379 186q0-10 10-10h20q10 0 10 10v28q0 10-10 10h-20q-10 0-10-10v-28Z" fill="url(#item-coral)"/>
+              <path d="M386 185q13-12 26 0" fill="none" stroke="#fff0e9" stroke-width="4" stroke-linecap="round"/>
+              <rect x="116" y="257" width="103" height="85" rx="15" fill="#e1f3ee"/>
+              <ellipse cx="168" cy="320" rx="30" ry="7" fill="#b9d9cf" opacity=".7"/>
+              <path d="M151 280q0-9 9-9h17q9 0 9 9v30h-35v-30Z" fill="#65bea8"/>
+              <path d="M158 282q9-12 20 0" fill="none" stroke="#d8fbf2" stroke-width="4"/>
+              <path d="M159 292h18" stroke="#e5fff8" stroke-width="3" stroke-linecap="round"/>
+              <rect x="232" y="257" width="103" height="85" rx="15" fill="#f3edf9"/>
+              <ellipse cx="284" cy="320" rx="28" ry="7" fill="#d6cde2" opacity=".7"/>
+              <path d="M267 286h34v28h-34z" rx="8" fill="#9981c8"/>
+              <path d="M274 286v-7a10 10 0 0 1 20 0v7" fill="none" stroke="#8068b5" stroke-width="5"/>
+              <path d="M277 297h14" stroke="#e9e0fb" stroke-width="3" stroke-linecap="round"/>
+              <rect x="348" y="257" width="103" height="85" rx="15" fill="#fff2d7"/>
+              <ellipse cx="399" cy="320" rx="28" ry="7" fill="#e6d3ad" opacity=".7"/>
+              <path d="M375 302q4-20 24-20t24 20v11h-48v-11Z" fill="#f0c15e"/>
+              <path d="M385 293h28" stroke="#fff4d3" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="435" cy="248" r="14" fill="#fff"/>
+              <path d="m428 248 5 5 9-11" fill="none" stroke="#35b99c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <path d="M432 336c19 5 28 17 32 32" fill="none" stroke="#7167c8" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 9"/>
+            <circle cx="465" cy="371" r="7" fill="#7167c8"/>
+          </svg>
+          <span class="visual-tag" aria-hidden="true"><span class="tag-spark"></span><span data-i18n="visualTag">Organized at a glance</span></span>
+          <span class="visual-caption" data-i18n="illustrationLabel">Illustration of a product image gallery</span>
+        </div>
+      </section>
+
+      <section class="features page-width" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="featuresEyebrow">Made for a focused task</span></p>
+          <h2 id="features-title" data-i18n="featuresTitle">From page to saved images</h2>
+          <p data-i18n="featuresIntro">A straightforward way to collect, review, and download product images.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon icon-lilac" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false"><path d="M6 8.5A2.5 2.5 0 0 1 8.5 6h15A2.5 2.5 0 0 1 26 8.5v15a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 6 23.5v-15Z"/><circle cx="20.5" cy="12" r="2.5"/><path d="m7 22 6.2-6.4 4.3 4.1 2.8-2.6 4.7 5.1"/></svg>
+            </span>
+            <h3 data-i18n="featureCaptureTitle">Find image candidates</h3>
+            <p data-i18n="featureCaptureBody">Collect image candidates from supported pages in one click.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon icon-mint" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false"><path d="M7 8.5A2.5 2.5 0 0 1 9.5 6h14A2.5 2.5 0 0 1 26 8.5v14a2.5 2.5 0 0 1-2.5 2.5h-14A2.5 2.5 0 0 1 7 22.5v-14Z"/><path d="m11 16 3.2 3.2L21 12.5"/></svg>
+            </span>
+            <h3 data-i18n="featureSelectTitle">Choose what to keep</h3>
+            <p data-i18n="featureSelectBody">Preview the gallery and select only the images you need.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon icon-peach" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false"><path d="M16 5v14m0 0 5-5m-5 5-5-5"/><path d="M7 20v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg>
+            </span>
+            <h3 data-i18n="featureDownloadTitle">Save as PNG</h3>
+            <p data-i18n="featureDownloadBody">Download selected images as PNG files in a clear, simple workflow.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="install-section" aria-labelledby="install-title">
+        <div class="page-width install-inner">
+          <div class="section-heading install-heading">
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="installEyebrow">Get started</span></p>
+            <h2 id="install-title" data-i18n="installTitle">Install in three steps</h2>
+            <p data-i18n="installIntro">Download the ZIP, then use Chrome's built-in extension settings.</p>
+          </div>
+          <ol class="steps">
+            <li class="step-card">
+              <span class="step-number" aria-hidden="true">01</span>
+              <div><h3 data-i18n="stepDownloadTitle">Download the ZIP</h3><p data-i18n="stepDownloadBody">Save the v0.1.0 release file from the button above.</p></div>
+            </li>
+            <li class="step-card">
+              <span class="step-number" aria-hidden="true">02</span>
+              <div><h3 data-i18n="stepExtractTitle">Extract the files</h3><p data-i18n="stepExtractBody">Unzip the download to a folder you can find again.</p></div>
+            </li>
+            <li class="step-card">
+              <span class="step-number" aria-hidden="true">03</span>
+              <div><h3 data-i18n="stepLoadTitle">Load the extension</h3><p data-i18n="stepLoadBody">Open chrome://extensions, enable Developer mode, choose Load unpacked, and select the extracted extension/ folder.</p></div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="support-panel page-width" aria-labelledby="support-title">
+        <span class="support-symbol" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false"><path d="M16 5.5v11m0 5v.1"/><circle cx="16" cy="16" r="12.2"/></svg>
+        </span>
+        <div>
+          <h2 id="support-title" data-i18n="supportTitle">Platform support</h2>
+          <p data-i18n="supportBody">Suning support is experimental. Login requirements or page restrictions may affect image collection.</p>
+          <p class="support-note" data-i18n="supportNote">Page behavior can change, so results may vary between product pages.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner page-width">
+        <span class="footer-brand"><span data-i18n="brandName">Product Image Downloader</span> <span class="footer-separator">·</span> <span data-i18n="footerNote">A lightweight, no-build Chrome extension.</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/myuverr/ecommerce-image-downloader" data-i18n="repositoryLink">View the project on GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
