@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品图库 · PNG 下载</title>
+    <link rel="stylesheet" href="gallery.css">
+    <script type="module" src="gallery.js"></script>
+  </head>
+  <body>
+    <main>
+      <header class="heading">
+        <p class="eyebrow">IMAGE GALLERY / PNG</p>
+        <h1>把好图片，收进图库</h1>
+        <p id="capture-title">商品图片</p>
+        <p id="demo-notice" class="notice"
+          hidden>Sample images — not captured from a website.</p>
+      </header>
+      <section class="toolbar" aria-label="图片选择与下载">
+        <div class="selection">
+          <button id="select-all" type="button" disabled>全选</button>
+          <button id="invert" type="button" disabled>反选</button>
+          <span id="selection-count" aria-live="polite">已选 0 / 0</span>
+        </div>
+        <button id="download" class="primary" type="button"
+          disabled>批量下载 PNG</button>
+      </section>
+      <section class="feedback" aria-label="批次进度">
+        <p id="message" role="status">正在读取图库…</p>
+        <label for="progress"
+          id="batch-summary">选择图片后，逐张转换并下载 PNG</label>
+        <progress id="progress" max="1" value="0"></progress>
+      </section>
+      <section id="gallery" class="grid" aria-label="图片列表"></section>
+      <footer>逐张处理 · 仅在浏览器确认终态后显示下载完成<br>关闭图库会释放本页资源；等待中的下载状态将不再跟踪。</footer>
+    </main>
+  </body>
+</html>
